@@ -1,0 +1,64 @@
+# Model configuration for Data Analyst Agent
+# Each model can be selected per-agent or globally.
+# API keys are read from environment variables.
+
+default_model: claude-sonnet-4-20250514
+
+models:
+  # Anthropic Claude
+  claude-sonnet-4-20250514:
+    provider: anthropic
+    model_id: claude-sonnet-4-20250514
+    env_var: ANTHROPIC_API_KEY
+
+  claude-opus-4-20250514:
+    provider: anthropic
+    model_id: claude-opus-4-20250514
+    env_var: ANTHROPIC_API_KEY
+
+  # Google Gemini
+  gemini-2.5-pro:
+    provider: google
+    model_id: gemini-2.5-pro
+    env_var: GEMINI_API_KEY
+
+  gemini-2.5-flash:
+    provider: google
+    model_id: gemini-2.5-flash
+    env_var: GEMINI_API_KEY
+
+  # OpenAI
+  gpt-4o:
+    provider: openai
+    model_id: gpt-4o
+    env_var: OPENAI_API_KEY
+
+  gpt-4.1:
+    provider: openai
+    model_id: gpt-4.1
+    env_var: OPENAI_API_KEY
+
+  # DeepSeek
+  deepseek-chat:
+    provider: deepseek
+    model_id: deepseek-chat
+    env_var: DEEPSEEK_API_KEY
+
+  # Kimi (Moonshot)
+  kimi-k2:
+    provider: moonshot
+    model_id: kimi-k2
+    env_var: KIMI_API_KEY
+
+  # Local models (llama.cpp, vLLM) — use OPENAI-compatible API
+  local-llama:
+    provider: openai
+    model_id: llama.cpp
+    base_url: http://localhost:8080/v1
+    env_var: LOCAL_API_KEY
+
+  local-vllm:
+    provider: openai
+    model_id: vllm
+    base_url: http://localhost:8000/v1
+    env_var: LOCAL_API_KEY

@@ -1,0 +1,12 @@
+google-adk
+streamlit
+litellm
+python-pptx
+plotly
+pandas
+scikit-learn
+pyyaml
+seaborn
+scipy
+statsmodels
+jinja2
